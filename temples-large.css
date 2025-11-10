@@ -1,0 +1,28 @@
+#menuButton {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li {
+  padding: 0;
+}
+
+main {
+  padding: 2rem;
+}
+
+.temple-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+
+figure img {
+  width: 100%;
+  max-width: 300px;
+}

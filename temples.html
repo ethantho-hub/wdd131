@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Album</title>
+  <link rel="stylesheet" href="temples.css">
+  <link rel="stylesheet" href="temples-large.css" media="(min-width: 768px)">
+  <script defer src="temples.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Temple Album</h1>
+    <nav>
+      <button id="menuButton">&#9776;</button>
+      <ul id="navMenu">
+        <li><button class="navBtn" data-category="home">Home</button></li>
+        <li><button class="navBtn" data-category="old">Old</button></li>
+        <li><button class="navBtn" data-category="new">New</button></li>
+        <li><button class="navBtn" data-category="large">Large</button></li>
+        <li><button class="navBtn" data-category="small">Small</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2 id="categoryTitle">Home</h2>
+    <div class="temple-gallery" id="templeGallery">
+      <!-- JavaScript will insert temple cards here -->
+    </div>
+  </main>
+
+  <footer>
+    <p>©2025 Ethan Thompson</p>
+    <p>Last Modification: 11/09/2025</p>
+  </footer>
+</body>
+</html>
