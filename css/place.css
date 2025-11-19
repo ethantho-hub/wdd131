@@ -1,0 +1,88 @@
+/* GENERAL PAGE STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 20px;
+  background: #eee;
+  border-bottom: 2px solid #ccc;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #eee;
+  margin-top: auto;
+}
+
+/* MAIN GRID LAYOUT - DESKTOP */
+.layout {
+  display: grid;
+  grid-template-columns: 300px 1fr 300px;
+  grid-template-areas:
+    "data main weather";
+  gap: 20px;
+  padding: 20px;
+}
+
+/* SECTIONS */
+.info-panel {
+  grid-area: data;
+  border: 1px solid #ccc;
+  padding: 15px;
+  background: #fafafa;
+}
+
+.weather-panel {
+  grid-area: weather;
+  border: 1px solid #ccc;
+  padding: 15px;
+  background: #fafafa;
+}
+
+/* MAIN IMAGE */
+.main-image {
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-image img {
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+/* Weather image */
+.weather-icon {
+  display: block;
+  margin: 10px 0;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "main"
+      "data"
+      "weather";
+  }
+
+  .main-image img {
+    max-width: 100%;
+  }
+}
