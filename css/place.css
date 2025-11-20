@@ -1,3 +1,4 @@
+/* GENERAL RESET */
 * {
   margin: 0;
   padding: 0;
@@ -5,12 +6,14 @@
   font-family: Arial, sans-serif;
 }
 
+/* PAGE STRUCTURE */
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+/* HEADER */
 header {
   text-align: center;
   padding: 20px;
@@ -18,6 +21,7 @@ header {
   border-bottom: 2px solid #ccc;
 }
 
+/* FOOTER */
 footer {
   text-align: center;
   padding: 15px;
@@ -25,7 +29,7 @@ footer {
   margin-top: auto;
 }
 
-/* Main Layout */
+/* MAIN GRID (DESKTOP) */
 .layout {
   display: grid;
   grid-template-columns: 300px 1fr 300px;
@@ -35,38 +39,41 @@ footer {
   padding: 20px;
 }
 
-.info-panel {
-  grid-area: data;
-  border: 1px solid #ccc;
-  padding: 15px;
-  background: #fafafa;
-}
-
+/* PANELS */
+.info-panel,
 .weather-panel {
-  grid-area: weather;
   border: 1px solid #ccc;
   padding: 15px;
   background: #fafafa;
 }
 
-.main-image {
-  grid-area: main;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+/* AREA PLACEMENT */
+.info-panel { grid-area: data; }
+.main-image  { grid-area: main; }
+.weather-panel { grid-area: weather; }
 
-.main-image img {
+/* MAIN IMAGE AS BACKGROUND */
+.main-image {
   width: 100%;
+  height: 400px;
+  background-image: url("/image/MNVMHR6OM5GERBUJNZ2H247WKY.avif"); /* <-- your image here */
+  background-size: cover;
+  background-position: center;
   border: 1px solid #ccc;
 }
 
+/* WEATHER ICON AS BACKGROUND */
 .weather-icon {
-  display: block;
+  width: 60px;
+  height: 60px;
   margin: 10px 0;
+  background-image: url("/image/9098495.png"); /* <-- your icon here */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-/* Mobile Layout */
+/* MOBILE RESPONSIVE STACK */
 @media (max-width: 800px) {
   .layout {
     grid-template-columns: 1fr;
@@ -74,5 +81,9 @@ footer {
       "main"
       "data"
       "weather";
+  }
+
+  .main-image {
+    height: 250px;
   }
 }
