@@ -56,7 +56,7 @@ footer {
 .main-image {
   width: 100%;
   height: 400px;
-  background-image: url("/image/MNVMHR6OM5GERBUJNZ2H247WKY.avif"); /* <-- your image here */
+  background-image: url("../image/MNVMHR6OM5GERBUJNZ2H247WKY.avif"); /* <-- your image here */
   background-size: cover;
   background-position: center;
   border: 1px solid #ccc;
@@ -67,7 +67,7 @@ footer {
   width: 60px;
   height: 60px;
   margin: 10px 0;
-  background-image: url("/image/9098495.png"); /* <-- your icon here */
+  background-image: url("../image/9098495.png"); /* <-- your icon here */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
