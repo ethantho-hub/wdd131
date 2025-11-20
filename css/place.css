@@ -1,4 +1,3 @@
-/* GENERAL PAGE STYLES */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +11,6 @@ body {
   min-height: 100vh;
 }
 
-/* HEADER */
 header {
   text-align: center;
   padding: 20px;
@@ -20,7 +18,6 @@ header {
   border-bottom: 2px solid #ccc;
 }
 
-/* FOOTER */
 footer {
   text-align: center;
   padding: 15px;
@@ -28,7 +25,7 @@ footer {
   margin-top: auto;
 }
 
-/* MAIN GRID LAYOUT - DESKTOP */
+/* Main Layout */
 .layout {
   display: grid;
   grid-template-columns: 300px 1fr 300px;
@@ -38,7 +35,6 @@ footer {
   padding: 20px;
 }
 
-/* SECTIONS */
 .info-panel {
   grid-area: data;
   border: 1px solid #ccc;
@@ -53,7 +49,6 @@ footer {
   background: #fafafa;
 }
 
-/* MAIN IMAGE */
 .main-image {
   grid-area: main;
   display: flex;
@@ -66,13 +61,12 @@ footer {
   border: 1px solid #ccc;
 }
 
-/* Weather image */
 .weather-icon {
   display: block;
   margin: 10px 0;
 }
 
-/* MOBILE VIEW */
+/* Mobile Layout */
 @media (max-width: 800px) {
   .layout {
     grid-template-columns: 1fr;
@@ -80,9 +74,5 @@ footer {
       "main"
       "data"
       "weather";
-  }
-
-  .main-image img {
-    max-width: 100%;
   }
 }

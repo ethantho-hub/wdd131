@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Place Title</title>
-  <link rel="stylesheet" href="/css/place.css" />
+  <link rel="stylesheet" href="styles.css" href="place.js" />
 </head>
 <body>
 
@@ -19,36 +19,37 @@
     <!-- Data Panel -->
     <section class="info-panel">
       <h2>Data</h2>
-      <p><strong>Label:</strong> Value</p>
-      <p><strong>Label:</strong> Value</p>
-      <p><strong>Label:</strong> Value</p>
-      <p><strong>Label:</strong> Value</p>
-      <p><strong>Label:</strong> Value</p>
-      <p><strong>Label:</strong> Value</p>
+      <p><strong>Capital:</strong> <span id="capital"></span></p>
+      <p><strong>Population:</strong> <span id="population"></span></p>
+      <p><strong>Founded:</strong> <span id="founded"></span></p>
+      <p><strong>Region:</strong> <span id="region"></span></p>
+      <p><strong>Elevation:</strong> <span id="elevation"></span></p>
+      <p><strong>Timezone:</strong> <span id="timezone"></span></p>
     </section>
 
     <!-- Main Image -->
     <div class="main-image">
-      <img src="https://via.placeholder.com/1200x600" alt="Large Image" />
+      <img id="place-image" src="/image/MNVMHR6OM5GERBUJNZ2H247WKY.avif" alt="Large Image" />
     </div>
 
     <!-- Weather Panel -->
     <section class="weather-panel">
       <h2>Weather</h2>
-      <img class="weather-icon" src="https://via.placeholder.com/60" alt="Weather Icon" />
-      <p><strong>Label:</strong> Value</p>
-      <p><strong>Label:</strong> Value</p>
-      <p><strong>Label:</strong> Value</p>
-      <p><strong>Label:</strong> Value</p>
+      <img id="weather-icon" class="weather-icon" src="https://www.accuweather.com/en/us/brigham-city/84302/weather-forecast/336136" alt="Weather Icon" />
+      <p><strong>Temperature:</strong> <span id="temperature"></span></p>
+      <p><strong>Condition:</strong> <span id="condition"></span></p>
+      <p><strong>Humidity:</strong> <span id="humidity"></span></p>
+      <p><strong>Wind:</strong> <span id="wind"></span></p>
     </section>
 
   </main>
 
   <!-- Footer -->
-  <footer>
+  <footer id="footer">
     Standard Footer content - copyright - name - location <br>
-    Last modified Date
+    Last modified: <span id="lastModified"></span>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
