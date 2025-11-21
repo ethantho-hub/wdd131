@@ -1,54 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Place Title</title>
-  <link rel="stylesheet" href="/css/place.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Title</title>
+    <link rel="stylesheet" href="css/place.css">
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>Utah</h1>
-  </header>
+<header>
+    <h1>Place Title</h1>
+</header>
 
-  <!-- Main Content -->
-  <main class="layout">
+<main>
+    <!-- MAIN IMAGE -->
+    <section class="main-image"></section>
 
-    <!-- Data Panel -->
-    <section class="info-panel">
-      <h2>Data</h2>
-      <p><strong>Capital: Salt Lake City</strong> <span id="capital"></span></p>
-      <p><strong>Population: 3.3 million</strong> <span id="population"></span></p>
-      <p><strong>Founded: January 4, 1896</strong> <span id="founded"></span></p>
-      <p><strong>Region: Mountain West</strong> <span id="region"></span></p>
-      <p><strong>Elevation: 6,100 ft above sea level</strong> <span id="elevation"></span></p>
-      <p><strong>Timezone: Mountain standard time</strong> <span id="timezone"></span></p>
+    <!-- DATA BOX -->
+    <section class="data-box">
+        <h2>Data</h2>
+        <p><strong>Label:</strong> Value</p>
+        <p><strong>Label:</strong> Value</p>
+        <p><strong>Label:</strong> Value</p>
+        <p><strong>Label:</strong> Value</p>
+        <p><strong>Label:</strong> Value</p>
     </section>
 
-    <!-- Main Image -->
-    <div class="main-image">
-</div>
-
-    <!-- Weather Panel -->
-    <section class="weather-panel">
-      <h2>Weather</h2>
-      <p><strong>Temperature:</strong> <span id="temperature"></span></p>
-      <p><strong>Condition:</strong> <span id="condition"></span></p>
-      <p><strong>Humidity:</strong> <span id="humidity"></span></p>
-      <p><strong>Wind:</strong> <span id="wind"></span></p>
+    <!-- WEATHER BOX -->
+    <section class="weather-box">
+        <h2>Weather</h2>
+        <img src="image/9098495.png" alt="Weather Icon" class="weather-icon">
+        <p><strong>Label:</strong> Value</p>
+        <p><strong>Label:</strong> Value</p>
+        <p><strong>Label:</strong> Value</p>
+        <p><strong>Label:</strong> Value</p>
     </section>
+</main>
 
-  </main>
+<footer>
+    <p>&copy; <span id="year"></span> | Your Name | Your Location</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+</footer>
 
-  <!-- Footer -->
-  <footer id="footer">
-    ©2025 Ethan Thompson Utah
- <br>
-    Last modified: 11/20/2025<span id="lastModified"></span>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="place.js"></script>
 </body>
 </html>
