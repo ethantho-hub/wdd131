@@ -23,7 +23,7 @@ header {
 .hero-background {
     width: 100%;
     min-height: 70vh;
-    background-image: url("../image/MNVMHR6OM5GERBUJNZ2H247WKY.avif");
+    background-image: url("/image/MNVMHR6OM5GERBUJNZ2H247WKY.avif");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
