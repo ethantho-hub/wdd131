@@ -20,13 +20,16 @@ header {
 }
 
 /* MAIN IMAGE */
-.main-image {
+.hero-image {
+    width: 100%;
+    height: 50vh;        /* adjusts the visible height */
     background-image: url("../image/MNVMHR6OM5GERBUJNZ2H247WKY.avif");
     background-size: cover;
     background-position: center;
-    height: 300px;
-    width: 100%;
+    background-repeat: no-repeat;
+    margin: 0 auto;
 }
+
 
 /* SECTION BOXES */
 .data-box, .weather-box {
