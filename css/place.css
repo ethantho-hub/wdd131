@@ -1,85 +1,22 @@
-/* Basic reset */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html,body { height: 100%; }
-
-/* Page font + bg */
-body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: #f3f3f3;
-  color: #111;
-}
-
-/* Header */
-.site-header {
-  background: #e5e5e5;
-  border-bottom: 2px solid #cfcfcf;
-  text-align: center;
-  padding: 18px 8px;
-}
-.site-header h1 { font-size: 36px; }
-
-/* HERO BACKGROUND - this is the key: background behind everything */
+/* Make the background and layout */
 .hero-background {
-  /* use the uploaded local path as the background image */
-  background-image: url("/image/MNVMHR6OM5GERBUJNZ2H247WKY.avif");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+    background-image: url("../image/MNVMHR6OM5GERBUJNZ2H247WKY.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
-  /* size & layout */
-  min-height: 62vh;         /* adjust as you like */
-  display: grid;
-  grid-template-columns: 320px 1fr 320px;
-  gap: 24px;
-  align-items: end;         /* panels sit toward bottom like your wireframe */
-  padding: 32px 48px;
-}
-
-/* a transparent center spacer so background shows through */
-.hero-spacer { min-height: 320px; }
-
-/* Panel (Data + Weather) common styling */
-.panel {
-  background-color: rgba(255,255,255,0.92); /* slightly translucent so background shows */
-  border: 3px solid #111;
-  padding: 18px;
-  width: 100%;
-  max-width: 320px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-}
-
-/* box headings */
-.panel h2 {
-  font-size: 20px;
-  margin-bottom: 8px;
-}
-
-/* weather icon sizing */
-.weather-icon {
-  width: 64px;
-  height: 64px;
-  display: block;
-  margin-bottom: 12px;
-}
-
-/* FOOTER */
-.site-footer {
-  background: #e5e5e5;
-  border-top: 2px solid #cfcfcf;
-  text-align: center;
-  padding: 12px;
-  font-size: 13px;
-}
-
-/* RESPONSIVE: stack layout on small screens */
-@media (max-width: 880px) {
-  .hero-background {
-    grid-template-columns: 1fr;
-    align-items: center;
-    padding: 18px;
     min-height: 70vh;
-  }
-  .hero-spacer { display: none; }
-  .panel { max-width: 92%; width: 92%; margin: 0 auto; }
-  .panel + .panel { margin-top: 18px; } /* slight spacing between stacked panels */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 2rem;
+}
+
+/* Data & Weather Boxes */
+.data-box,
+.weather-box {
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 2px solid #000;
+    padding: 1rem;
+    width: 280px;
 }
