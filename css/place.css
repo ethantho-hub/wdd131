@@ -1,80 +1,85 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Basic reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
 
+/* Page font + bg */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f3f3f3;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #f3f3f3;
+  color: #111;
 }
 
-/* HEADER */
-header {
-    background: #ddd;
-    padding: 20px;
-    text-align: center;
-    font-size: 1.8rem;
-    border-bottom: 2px solid #bbb;
+/* Header */
+.site-header {
+  background: #e5e5e5;
+  border-bottom: 2px solid #cfcfcf;
+  text-align: center;
+  padding: 18px 8px;
 }
+.site-header h1 { font-size: 36px; }
 
-/* MAIN IMAGE */
+/* HERO BACKGROUND - this is the key: background behind everything */
 .hero-background {
-    width: 100%;
-    min-height: 70vh;
-    background-image: url("/image/MNVMHR6OM5GERBUJNZ2H247WKY.avif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  /* use the uploaded local path as the background image */
+  background-image: url("/mnt/data/1adbaa78-26e0-4fb4-abcf-83047316df95.avif");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 2rem;
+  /* size & layout */
+  min-height: 62vh;         /* adjust as you like */
+  display: grid;
+  grid-template-columns: 320px 1fr 320px;
+  gap: 24px;
+  align-items: end;         /* panels sit toward bottom like your wireframe */
+  padding: 32px 48px;
 }
 
+/* a transparent center spacer so background shows through */
+.hero-spacer { min-height: 320px; }
 
-/* SECTION BOXES */
-.data-box, .weather-box {
-    background-color: rgba(255, 255, 255, 0.85);
-    border: 2px solid #333;
-    padding: 1rem 1.5rem;
-    width: 280px;
-    backdrop-filter: blur(2px);
+/* Panel (Data + Weather) common styling */
+.panel {
+  background-color: rgba(255,255,255,0.92); /* slightly translucent so background shows */
+  border: 3px solid #111;
+  padding: 18px;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
 }
 
+/* box headings */
+.panel h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
 
-/* WEATHER ICON */
+/* weather icon sizing */
 .weather-icon {
-    width: 60px;
-    height: 60px;
-    display: block;
-    margin-bottom: 15px;
+  width: 64px;
+  height: 64px;
+  display: block;
+  margin-bottom: 12px;
 }
-
-/* DESKTOP LAYOUT */
-@media (max-width: 768px) {
-    .hero-background {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-        padding: 1rem;
-    }
-
-    .data-box,
-    .weather-box {
-        width: 90%;
-    }
-}
-
 
 /* FOOTER */
-footer {
-    margin-top: 20px;
-    background: #ddd;
-    text-align: center;
-    padding: 15px;
-    font-size: 0.9rem;
-    border-top: 2px solid #bbb;
+.site-footer {
+  background: #e5e5e5;
+  border-top: 2px solid #cfcfcf;
+  text-align: center;
+  padding: 12px;
+  font-size: 13px;
+}
+
+/* RESPONSIVE: stack layout on small screens */
+@media (max-width: 880px) {
+  .hero-background {
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding: 18px;
+    min-height: 70vh;
+  }
+  .hero-spacer { display: none; }
+  .panel { max-width: 92%; width: 92%; margin: 0 auto; }
+  .panel + .panel { margin-top: 18px; } /* slight spacing between stacked panels */
 }
